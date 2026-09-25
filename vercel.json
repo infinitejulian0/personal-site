@@ -4,11 +4,40 @@
     {
       "source": "/lucid/(.*)",
       "headers": [
-        { "key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive" },
-        { "key": "Referrer-Policy", "value": "no-referrer" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Content-Security-Policy", "value": "default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'" }
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noarchive"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "no-referrer"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
       ]
+    },
+    {
+      "source": "/lucid/(privacy|support|delete-account|terms)(/index.html|/)?",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/lucid",
+      "destination": "/lucid/support/",
+      "permanent": false
+    },
+    {
+      "source": "/lucid/",
+      "destination": "/lucid/support/",
+      "permanent": false
     }
   ]
 }

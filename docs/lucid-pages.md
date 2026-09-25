@@ -15,8 +15,10 @@ Connect disclosures. A published notice does not replace required in-app consent
 Recheck provider settings, deletion behavior, and retention before each release.
 Contact: infinite@julian.ai. Do not publish the private Apple review phone number.
 
-The `/lucid/` CSP permits local CSS/images and blocks scripts, frames and forms.
-It does not change the React site's other routes. Node 22 replaces the previous
+The CSP applies only to the four published documents (including index.html
+URLs), permits local CSS/images, and blocks scripts, frames and forms. Unknown
+paths retain the React fallback; `/lucid/` redirects to support. The policy
+headers do not change the React site's other routes. Node 22 replaces the previous
 open-ended Node requirement because the linked Vercel project used retired Node 18.
 
 Validation: production build with Node 22; browser checks at 320, 390 and 1280px;
