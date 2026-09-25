@@ -1,0 +1,30 @@
+:root { color-scheme: light; --paper: #faf9f5; --ink: #252a27; --muted: #59615a; --line: #d8ddd4; --link: #27563c; }
+* { box-sizing: border-box; }
+html { font-size: 100%; scroll-padding-top: 2rem; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 1.125rem/1.75 Georgia, 'Times New Roman', serif; }
+a { color: var(--link); text-underline-offset: .2em; text-decoration-thickness: 1px; overflow-wrap: anywhere; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 3px solid var(--link); outline-offset: 5px; border-radius: 2px; }
+.skip { position: absolute; top: -100px; left: 1rem; padding: .5rem 1rem; background: var(--paper); z-index: 2; }
+.skip:focus { top: 1rem; }
+.shell { max-width: 760px; margin: 0 auto; padding: 0 28px; }
+header { padding: 44px 0 26px; border-bottom: 1px solid var(--line); }
+.wordmark { font-size: 1.75rem; color: var(--ink); text-decoration: none; letter-spacing: -.06em; }
+.eyebrow, .date, nav, footer { font-family: Verdana, Geneva, sans-serif; font-size: .8125rem; line-height: 1.8; }
+.eyebrow { color: var(--muted); letter-spacing: .14em; text-transform: uppercase; margin: 38px 0 10px; }
+h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); line-height: 1.12; font-weight: normal; letter-spacing: -.04em; margin: 0 0 18px; }
+h2 { font-size: 1.55rem; line-height: 1.35; font-weight: normal; margin: 2.4rem 0 .75rem; }
+h3 { font-size: 1.125rem; margin: 1.5rem 0 .3rem; }
+p { margin: .85rem 0; }
+.date { color: var(--muted); margin-bottom: 26px; }
+.lead { font-size: 1.25rem; line-height: 1.65; }
+nav { display: flex; flex-wrap: wrap; gap: 4px 22px; padding: 20px 0; border-bottom: 1px solid var(--line); }
+nav a { display: inline-flex; align-items: center; min-height: 44px; }
+nav [aria-current="page"] { font-weight: bold; color: var(--ink); }
+ul, ol { padding-left: 1.35em; }
+li { margin: .55rem 0; padding-left: .15em; }
+.note { border-left: 3px solid var(--line); padding-left: 20px; color: var(--muted); }
+footer { border-top: 1px solid var(--line); margin-top: 48px; padding: 24px 0 42px; color: var(--muted); }
+footer a { display: inline-flex; min-height: 44px; align-items: center; }
+@media (max-width: 420px) { .shell { padding: 0 20px; } header { padding-top: 28px; } body { font-size: 1.0625rem; } nav { gap: 2px 16px; } }
+@media print { body { background: white; font-size: 11pt; } .shell { max-width: none; padding: 0; } nav, .skip { display: none; } a { color: inherit; } h2 { break-after: avoid; } }
